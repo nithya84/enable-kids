@@ -1,0 +1,4 @@
+# Cloudflare Pages redirect rules
+# Proxy memory game from CloudFront distribution
+/memory-game/*  https://d19me0v65pp4hx.cloudfront.net/:splat  200
+/memory-game    https://d19me0v65pp4hx.cloudfront.net/        200

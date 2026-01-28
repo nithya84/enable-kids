@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://enable.kids/sitemap.xml
+
+# Crawl-delay (optional, prevents aggressive crawling)
+Crawl-delay: 1
