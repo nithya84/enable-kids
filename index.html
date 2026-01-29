@@ -81,7 +81,16 @@
             <p class="signup-intro">
                 Get notified when new tools launch, and help me understand what would be most useful for you and your family.
             </p>
-            <form action="#" method="POST">
+            <form action="https://api.web3forms.com/submit" method="POST">
+                <!-- Web3Forms Access Key - Get yours at https://web3forms.com -->
+                <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                <!-- Email will be sent to this address -->
+                <input type="hidden" name="from_name" value="enable.kids Signup Form">
+                <!-- Subject line -->
+                <input type="hidden" name="subject" value="New enable.kids signup">
+                <!-- Redirect after submission -->
+                <input type="hidden" name="redirect" value="https://enable.kids/thank-you.html">
+
                 <div class="form-group">
                     <label for="name">Your name</label>
                     <input type="text" id="name" name="name" required>
@@ -95,19 +104,19 @@
                 <div class="checkbox-group">
                     <label>I am... (select all that apply)</label>
                     <div class="checkbox-option">
-                        <input type="checkbox" id="neurodivergent" name="role" value="neurodivergent">
+                        <input type="checkbox" id="neurodivergent" name="roles[]" value="neurodivergent">
                         <span>Neurodivergent myself</span>
                     </div>
                     <div class="checkbox-option">
-                        <input type="checkbox" id="parent" name="role" value="parent">
+                        <input type="checkbox" id="parent" name="roles[]" value="parent">
                         <span>A parent or caregiver</span>
                     </div>
                     <div class="checkbox-option">
-                        <input type="checkbox" id="therapist" name="role" value="therapist">
+                        <input type="checkbox" id="therapist" name="roles[]" value="therapist">
                         <span>A therapist or educator</span>
                     </div>
                     <div class="checkbox-option">
-                        <input type="checkbox" id="other" name="role" value="other">
+                        <input type="checkbox" id="other" name="roles[]" value="other">
                         <span>Other</span>
                     </div>
                 </div>
