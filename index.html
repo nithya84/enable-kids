@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>enable.kids - Learning Experiences for Special Needs</title>
+    <title>enable.kids - Tools for neurodivergent children and their families</title>
 
     <!-- Primary Meta Tags -->
-    <meta name="description" content="Learning experiences designed for learners with special needs. We help children thrive in the real world through meaningful, accessible education that brings calm and joy.">
-    <meta name="keywords" content="special needs learning, adaptive learning, accessible education, neurodivergent learning, special education tools, real-world skills, breakthrough learning">
+    <meta name="description" content="Tools designed for neurodivergent children and their families. Customizable learning experiences that adapt to your child's needs, making life simpler through thoughtful AI-powered solutions.">
+    <meta name="keywords" content="neurodivergent children, autism tools, special needs learning, adaptive learning, special interests, accessible education, neurodivergent learning, autism spectrum, special education tools">
     <meta name="author" content="enable.kids">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://enable.kids/">
-    <meta property="og:title" content="enable.kids - Learning Experiences for Special Needs">
-    <meta property="og:description" content="Learning experiences designed for learners with special needs. We help children thrive in the real world through meaningful, accessible education that brings calm and joy.">
+    <meta property="og:title" content="enable.kids - Tools for neurodivergent children">
+    <meta property="og:description" content="Tools designed for neurodivergent children and their families. Customizable learning experiences that adapt to your child's needs.">
     <meta property="og:image" content="https://enable.kids/og-image.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://enable.kids/">
-    <meta property="twitter:title" content="enable.kids - Learning Experiences for Special Needs">
-    <meta property="twitter:description" content="Learning experiences designed for learners with special needs. We help children thrive in the real world through meaningful, accessible education that brings calm and joy.">
+    <meta property="twitter:title" content="enable.kids - Tools for neurodivergent children">
+    <meta property="twitter:description" content="Tools designed for neurodivergent children and their families. Customizable learning experiences that adapt to your child's needs.">
     <meta property="twitter:image" content="https://enable.kids/og-image.jpg">
 
     <!-- Structured Data -->
@@ -31,7 +31,7 @@
       "@type": "Organization",
       "name": "enable.kids",
       "url": "https://enable.kids",
-      "description": "Learning experiences for learners with special needs",
+      "description": "Tools for neurodivergent children and their families",
       "sameAs": []
     }
     </script>
@@ -42,43 +42,105 @@
       "@type": "WebSite",
       "name": "enable.kids",
       "url": "https://enable.kids",
-      "description": "Learning experiences designed to help learners with special needs thrive in the real world"
+      "description": "Tools designed for neurodivergent children and their families"
     }
     </script>
 
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <header class="hero">
-            <h1>enable.kids</h1>
-            <p class="tagline">Learning Through Play</p>
-        </header>
+    <header>
+        <div class="container">
+            <h1 class="site-title">enable.kids</h1>
+        </div>
+    </header>
 
-        <main class="projects">
-            <h2>Interactive Learning Games</h2>
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <p class="hero-text">
+                Raising a neurodivergent child means <em>constantly</em> adapting, continuously searching for what works, and wishing someone understood your specific challenges and daily struggles. In an era where AI is making life simpler for everyone else, tools that work for your child - exactly when and where they need them most - shouldn't be rare or expensive.
+            </p>
+        </section>
 
-            <div class="project-grid">
-                <a href="/memory-game" class="project-card">
-                    <div class="project-icon">🎴</div>
-                    <h3>Memory Game</h3>
-                    <p>Match pairs of themed cards to exercise memory and concentration skills</p>
-                    <span class="project-status">Play Now</span>
-                </a>
-
-                <!-- Future projects will be added here -->
-                <div class="project-card coming-soon">
-                    <div class="project-icon">🚀</div>
-                    <h3>More Games Coming Soon</h3>
-                    <p>We're building more fun and educational experiences</p>
-                    <span class="project-status">In Development</span>
-                </div>
+        <!-- Available Now -->
+        <section class="tool-section">
+            <h2 class="section-title">Available now</h2>
+            <div class="tool-card">
+                <h3>Memory Game for Special Interests</h3>
+                <p>
+                    A customizable matching game designed to be a soothing, joyful experience for children on the autism spectrum. Choose from 20+ themes based on common special interests (trains, elevators, dinosaurs, space, and more), adjust difficulty levels, and let your child play in a way that feels good to them.
+                </p>
+                <a href="/memory-game" class="button">Play now →</a>
             </div>
-        </main>
+        </section>
 
-        <footer>
-            <p>&copy; 2026 enable.kids - Empowering young minds through technology</p>
-        </footer>
-    </div>
+        <!-- Email Signup -->
+        <section class="signup-section">
+            <h2>Stay connected</h2>
+            <p class="signup-intro">
+                Get notified when new tools launch, and help me understand what would be most useful for you and your family.
+            </p>
+            <form action="#" method="POST">
+                <div class="form-group">
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>I am... (select all that apply)</label>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="neurodivergent" name="role" value="neurodivergent">
+                        <span>Neurodivergent myself</span>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="parent" name="role" value="parent">
+                        <span>A parent or caregiver</span>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="therapist" name="role" value="therapist">
+                        <span>A therapist or educator</span>
+                    </div>
+                    <div class="checkbox-option">
+                        <input type="checkbox" id="other" name="role" value="other">
+                        <span>Other</span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">What tools would be most helpful? Or just say hi!</label>
+                    <textarea id="message" name="message" placeholder="Tell me what you're looking for, what challenges you're facing, or anything else you'd like to share..."></textarea>
+                </div>
+
+                <button type="submit" class="button">Stay in touch</button>
+            </form>
+        </section>
+
+        <!-- Coming Soon -->
+        <section class="tool-section">
+            <h2 class="section-title">Coming soon</h2>
+            <div class="coming-soon">
+                <h3>Structured Support Tools</h3>
+                <p>
+                    Visual frameworks and guides for emotional regulation, consequence understanding, and daily routines - designed to give neurodivergent children the structure they need to feel calm and capable.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="/philosophy">Learning philosophy</a>
+                <a href="/about">About</a>
+            </div>
+            <p class="footer-text">© 2026 enable.kids</p>
+        </div>
+    </footer>
 </body>
 </html>
