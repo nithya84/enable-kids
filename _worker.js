@@ -4,9 +4,8 @@ export default {
 
     // Proxy /memory-game/* to CloudFront
     if (url.pathname === '/memory-game' || url.pathname.startsWith('/memory-game/')) {
-      // Strip /memory-game prefix - CloudFront serves files at root
-      const path = url.pathname.replace(/^\/memory-game/, '') || '/';
-      const targetUrl = 'https://d19me0v65pp4hx.cloudfront.net' + path + url.search;
+      // Forward full path - CloudFront serves files under /memory-game/
+      const targetUrl = 'https://d19me0v65pp4hx.cloudfront.net' + url.pathname + url.search;
 
       try {
         const response = await fetch(targetUrl, {
