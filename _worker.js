@@ -5,7 +5,12 @@ export default {
     // Proxy /memory-game/* to CloudFront
     if (url.pathname === '/memory-game' || url.pathname.startsWith('/memory-game/')) {
       // Forward full path - CloudFront serves files under /memory-game/
-      const targetUrl = 'https://d19me0v65pp4hx.cloudfront.net' + url.pathname + url.search;
+      let path = url.pathname;
+      // Append index.html for directory requests
+      if (path === '/memory-game' || path === '/memory-game/') {
+        path = '/memory-game/index.html';
+      }
+      const targetUrl = 'https://d19me0v65pp4hx.cloudfront.net' + path + url.search;
 
       try {
         const response = await fetch(targetUrl, {
