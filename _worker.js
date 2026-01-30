@@ -18,6 +18,20 @@ export default {
           headers: request.headers,
         });
 
+        // Handle SPA routing: If we get 403/404 and it's not an asset request,
+        // return index.html so React Router can handle the route
+        if ((response.status === 403 || response.status === 404) &&
+            !path.includes('.') &&
+            !path.startsWith('/memory-game/assets/')) {
+          const indexUrl = 'https://d19me0v65pp4hx.cloudfront.net/memory-game/index.html';
+          const indexResponse = await fetch(indexUrl);
+          return new Response(indexResponse.body, {
+            status: 200,
+            statusText: 'OK',
+            headers: indexResponse.headers,
+          });
+        }
+
         return new Response(response.body, {
           status: response.status,
           statusText: response.statusText,
