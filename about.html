@@ -67,9 +67,6 @@
         }
 
         .profile-section {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
             margin-bottom: 40px;
         }
 
@@ -78,24 +75,33 @@
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            flex-shrink: 0;
+            float: left;
+            margin-right: 30px;
+            margin-bottom: 20px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
         .profile-text {
-            flex: 1;
+            /* Text will wrap around floated image */
+        }
+
+        .profile-text::after {
+            content: "";
+            display: table;
+            clear: both;
         }
 
         @media (max-width: 768px) {
-            .profile-section {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-
             .profile-image {
+                float: none;
+                display: block;
+                margin: 0 auto 20px;
                 width: 120px;
                 height: 120px;
+            }
+
+            .profile-section {
+                text-align: center;
             }
             main.about-page {
                 padding: 40px 30px;
@@ -129,7 +135,7 @@
             <img src="nithya-profile.jpg" alt="Nithya Krishnamoorthy" class="profile-image">
             <div class="profile-text">
                 <p>Hi! I'm Nithya Krishnamoorthy. I've spent 25 years working with kids who don't fit standard educational models and 10 years building infrastructure at Google. I'm an aunt to a child on the autism spectrum, and for the past several years I've been providing educational and behavioral support.</p>
-                <p>My work has always been with kids the system tells to "work harder" - first with kids trapped in poverty, spending all their energy on basic survival, then told they should have worked harder in school if they wanted to deserve better in life. Now I work closely with a neurodivergent child who spends all his energy just coping in a world built against how his brain works, trying to understand communication patterns that aren't meant for him.</p>
+                <p>My work has always been with kids the system tells to "work harder" - first with kids trapped in poverty, spending all their energy on basic survival, then told they should have worked harder in school if they wanted to deserve better in life. Now I see neurodivergent children spending all their energy just coping in a world built against how their brains work, trying to understand communication patterns that aren't meant for them.</p>
                 <p>The specifics are different, but the pattern is the same. When standard approaches don't work, the system blames the child instead of questioning whether the approach was ever designed for them.</p>
             </div>
         </div>
@@ -140,7 +146,7 @@
 
         <p>The parents are exhausted. By the end of each day on what feels like a battleground, they don't have much left to give. They get generic advice from professionals who don't care enough to understand their specific child. Cookie cutter advice that hasn't worked once for their child. Most suggestions feel like they were designed for someone else's kid.</p>
 
-        <p>And many of these children are struggling with crippling anxiety that we adults often misread as defiance, inability, or lack of motivation. A child who can't get ready for school isn't being difficult - they might be paralyzed by the fear of forgetting something, or overwhelmed by too many decisions, or unable to transition between activities without specific structure. But from the outside, it just looks like they're not trying.</p>
+        <p>And many of these children are struggling with crippling anxiety that is easy to misread as defiance, inability, or lack of motivation. What looks like a child being difficult might be paralysis from overwhelm, fear of getting something wrong, or inability to transition without specific structure. But from the outside, it just looks like they're not trying.</p>
 
         <p>And then there's the fact that every child on the spectrum is completely different. What works brilliantly for one child fails entirely for another. The behavioral strategies that help one kid manage meltdowns might trigger worse reactions in another. The learning approaches that engage one child leave another completely shut down. There's no template, no standard protocol that works across the board.</p>
 
