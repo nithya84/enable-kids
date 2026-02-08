@@ -18,6 +18,15 @@
             padding: 0 20px;
         }
 
+        .site-title-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .site-title-link:hover .site-title {
+            color: #5d7565;
+        }
+
         main.about-page {
             background: white;
             border-radius: 24px;
@@ -124,7 +133,9 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="site-title">enable.kids</h1>
+            <a href="/" class="site-title-link">
+                <h1 class="site-title">enable.kids</h1>
+            </a>
         </div>
     </header>
 
